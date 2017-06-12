@@ -1,0 +1,70 @@
+<html>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+  <link rel="stylesheet" type="text/css" href="/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+
+<body ng-app="BetagigApp" ng-controller="messagingController as mc" ng-cloak>
+
+  <div class="messaging-container container">
+
+    <div class="messaging-header row">
+      <div class="col-sm-12">
+        MESSAGES ({{mc.inboxCount}})
+      </div>
+    </div>
+
+    <div class="messaging-header row">
+      <div class="col-sm-2">
+        Date
+      </div>
+
+      <div class="col-sm-2">
+        To
+      </div>
+
+      <div class="col-sm-8">
+        Subject
+      </div>
+    </div>
+
+    <div class="messaging-row row" ng-repeat="msg in mc.currentUserMessages | filter:{ParentMessageId:0}:true">
+      <div class="message col-sm-12">
+
+        <div class="col-sm-2">
+          {{msg.DateCreated | date:shortDate}}
+        </div>
+
+        <div class="message-from col-sm-2" ng-repeat="corrMsg in mc.correspondenceMessages | filter:{ParentMessageId:msg.MessageId}:true">
+          <span>{{corrMsg.Username}}</span>
+        </div>
+
+        <div class="message-preview col-sm-8">
+          <span><a ng-href="/message/{{msg.MessageCorrespondenceId}}">{{msg.MessageSubject}}</a></span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
+<script src="/jquery/dist/jquery.min.js"></script>
+<script src="/angular/angular.min.js"></script>
+<script src="/betagig.js"></script>
+<script src="/betagig.module.js"></script>
+<script src="/core/controllers/base.controller.js"></script>
+<script src="/core/services/base.service.js"></script>
+
+<script>
+  angular.module(APPNAME).value("messageCorrespondenceId", null);
+</script>
+
+<script src="/messages/factory.js"></script>
+<script src="/messages/betagig.messaging.services.js"></script>
+<script src="/messages/messagingController.js"></script>

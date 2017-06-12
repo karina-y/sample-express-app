@@ -1,0 +1,58 @@
+[
+    {
+        "MessageId": 1,
+        "ParentMessageId": 0,
+        "MessageCorrespondenceId": 1,
+        "FromUserId": 1,
+        "ToUserId": 2,
+        "MessageSubject": "message subject filler",
+        "MessageBody": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "Username": "karina",
+        "UserIcon": "https://cdn2.iconfinder.com/data/icons/dactylography/512/latin-english-letter-k-uppercase-128.png",
+        "DateCreated": "2017-06-11T04:44:44.143Z",
+        "DateUpdated": "2017-06-11T04:44:44.143Z",
+        "_id": "c5631547eecd44cf93caf451b87d2e04"
+    },
+    {
+        "MessageId": 2,
+        "ParentMessageId": 1,
+        "MessageCorrespondenceId": 1,
+        "FromUserId": 2,
+        "ToUserId": 1,
+        "MessageSubject": "message subject filler",
+        "MessageBody": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet",
+        "Username": "jennifer",
+        "UserIcon": "https://cdn2.iconfinder.com/data/icons/rounded-icons-for-it/512/latin-english-letter-j-uppercase-128.png",
+        "DateCreated": "2017-06-11T05:44:44.143Z",
+        "DateUpdated": "2017-06-11T05:44:44.143Z",
+        "_id": "0ef15356f06a430d9c758ec12a743234"
+    },
+	    {
+        "MessageId": 3,
+        "ParentMessageId": 2,
+        "MessageCorrespondenceId": 1,
+        "FromUserId": 1,
+        "ToUserId": 2,
+        "MessageSubject": "message subject filler",
+        "MessageBody": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? ",
+        "Username": "karina",
+        "UserIcon": "https://cdn2.iconfinder.com/data/icons/dactylography/512/latin-english-letter-k-uppercase-128.png",
+        "DateCreated": "2017-06-11T04:44:44.143Z",
+        "DateUpdated": "2017-06-11T04:44:44.143Z",
+        "_id": "c5631547eedd44cf93caf451b87d2e04"
+    },
+    {
+        "MessageId": 4,
+        "ParentMessageId": 3,
+        "MessageCorrespondenceId": 1,
+        "FromUserId": 2,
+        "ToUserId": 1,
+        "MessageSubject": "message subject filler",
+        "MessageBody": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+        "Username": "jennifer",
+        "UserIcon": "https://cdn2.iconfinder.com/data/icons/rounded-icons-for-it/512/latin-english-letter-j-uppercase-128.png",
+        "DateCreated": "2017-06-11T05:44:44.143Z",
+        "DateUpdated": "2017-06-11T05:44:44.143Z",
+        "_id": "0ef15356w06a430d9c758ec12a743234"
+    }
+]

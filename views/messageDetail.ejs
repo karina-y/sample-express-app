@@ -1,0 +1,98 @@
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+    <link rel="stylesheet" type="text/css" href="/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/font-awesome/css/font-awesome.min.css" />
+</head>
+
+<body ng-app="BetagigApp" ng-controller="messagingController as mc" ng-cloak>
+
+    <div class="messaging-container container">
+        <div class="messaging-header row">
+
+            <div class="col-sm-12">
+                <h4>Subject: {{mc.messageThread[0].MessageSubject}}</h4>
+            </div>
+
+        </div>
+
+        <div class="messaging-row row"
+             ng-repeat="msg in mc.messageThread | orderBy:ParentMessageId"
+             ng-class="msg.FromUserId == mc.currentUserId ? 'from' : 'to'">
+
+            <div class="message col-sm-12">
+                <div class="container-fluid">
+                    <div class="row">
+
+                        <div class="message-details col-sm-2">
+
+                            <div class="edit-icons">
+                                <a href="#" ng-click="mc.editMessage(msg)" ng-if="msg.FromUserId == mc.currentUserId">
+                                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                </a>
+                                <a href="#" ng-click="mc.deleteMessage(msg._id)">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </a>
+                            </div>
+
+                            <div class="message-avatar">
+                                <img ng-src="{{msg.UserIcon}}">
+                            </div>
+
+                            <div class="message-date">
+                                {{msg.DateCreated | date : shortDate}} <span ng-if="msg.DateCreated != msg.DateUpdated"><i>(edited)</i></span>
+                            </div>
+
+                        </div>
+
+                        <div class="message col-sm-10">
+                            {{msg.MessageBody}}
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12 no-padding">
+                <textarea class="message-box" ng-model="mc.newMessage"></textarea>
+            </div>
+        </div>
+
+        <div class="messaging-reply row">
+
+            <div class="col-sm-6">
+                <button ng-click="mc.cancelMessage()" class="btn btn-danger">CANCEL</button>
+            </div>
+
+            <div class="col-sm-6">
+                <button ng-click="mc.sendMessage()" class="btn btn-primary pull-right" ng-show="mc.sending">SEND</button>
+                <button ng-click="mc.updateMessage()" class="btn btn-success pull-right" ng-show="mc.editing">SAVE</button>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>
+
+
+<script src="/jquery/dist/jquery.min.js"></script>
+<script src="/angular/angular.min.js"></script>
+<script src="/betagig.js"></script>
+<script src="/betagig.module.js"></script>
+<script src="/core/controllers/base.controller.js"></script>
+<script src="/core/services/base.service.js"></script>
+
+<script>
+    angular.module(APPNAME).value("messageCorrespondenceId", <%= messageCorrespondenceId %>);
+</script>
+
+<script src="/messages/factory.js"></script>
+<script src="/messages/betagig.messaging.services.js"></script>
+<script src="/messages/messagingController.js"></script>

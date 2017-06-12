@@ -1,0 +1,79 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+a {
+  color: #00B7FF;
+}
+/*etc*/
+.no-padding {
+  padding: 0 !important;
+}
+.messaging-container > .messaging-header {
+  padding: 20px;
+  border: solid lightgrey 1px;
+  background-color: #EFEFEF;
+}
+.messaging-container > .messaging-row {
+  background-color: #F5F5F5;
+  border: solid lightgrey 1px;
+  min-height: 75px;
+}
+.messaging-container > .messaging-row .message {
+  padding: 20px;
+  text-align: left;
+}
+.messaging-container > .messaging-row .message .message-details .message-date {
+  color: grey;
+  display: block;
+}
+.messaging-container > .messaging-row .message .message-details .message-avatar > img {
+  max-width: 50px;
+  border-radius: 25px;
+  margin: 5px 0;
+}
+.messaging-container > .messaging-row .message .message-details > .edit-icons {
+  display: block;
+}
+.messaging-container > .messaging-row .message .message-details > .edit-icons .fa {
+  padding: 3px;
+  font-size: 1.3em;
+}
+.messaging-container > .messaging-row .message .message-details > .edit-icons .fa.fa-times {
+  color: red;
+}
+.messaging-container > .messaging-row.from {
+  background-color: #FBFBFB;
+}
+.messaging-container > .messaging-row.from > .message {
+  text-align: right;
+}
+.messaging-container > .messaging-row.from > .message .message-details {
+  float: right;
+  text-align: right;
+}
+.messaging-container > .messaging-row.from > .message .message-details > .message-avatar > img {
+  text-align: right;
+}
+.messaging-container > .messaging-row.to {
+  background-color: #F5F5F5;
+}
+.messaging-container > .messaging-row.to .message-details {
+  float: left;
+  text-align: left;
+}
+.messaging-container > .messaging-row.to .message-details > .message-avatar > img {
+  text-align: left;
+}
+.messaging-container .message-box {
+  width: 100%;
+  min-height: 100px;
+  padding: 10px;
+}
+.messaging-container > .messaging-reply {
+  border: solid lightgrey 1px;
+  padding: 20px;
+}
+.messaging-container a:hover {
+  text-decoration: none;
+}
